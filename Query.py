@@ -23,7 +23,6 @@ for i in greaterThan:
 print()
 
 # finding all pokemon with ability "overgrow" query
-# overgrowAbility = pokemonColl.find({"abilities": { "$all": ["Overgrow"]}})
 print("All Overgrow abilities:")
 print()
 overgrowAbility = pokemonColl.find({"abilities": "Overgrow"})
