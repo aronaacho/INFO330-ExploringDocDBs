@@ -3,4 +3,8 @@ from pymongo import MongoClient
 mongoClient = MongoClient("mongodb://localhost/pokemon")
 pokemonDB = mongoClient['pokemondb']
 pokemonColl = pokemonDB['pokemon_data']
-print("I found " + pokemonColl.count_documents({}) + " pokemon")
+
+count_docu = pokemonColl.count_documents({})
+print("I found " + count_docu + " pokemon")
+
+pokemonDB.getCollection("pokemon_data").find({})
